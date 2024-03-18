@@ -1,3 +1,7 @@
+"""
+This script applies the segmenter function (segmenter_function.py) to images in the "test" folder
+"""
+
 import multiprocessing
 import os
 import cv2
