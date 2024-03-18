@@ -1,3 +1,6 @@
+"""
+This script checks the dimensions of the .hdf5 files. 
+"""
 import h5py
 import numpy as np
 
