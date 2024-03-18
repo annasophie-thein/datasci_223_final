@@ -1,4 +1,6 @@
-
+"""
+This script creates a .hdf5 file that stores the train data. 
+"""
 import os
 import cv2
 import numpy as np
