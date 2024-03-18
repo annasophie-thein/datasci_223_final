@@ -1,4 +1,6 @@
-
+"""
+This script applies the segmenter function (segmenter_function.py) to images in the "train" folder
+"""
 import multiprocessing
 import os
 import cv2
