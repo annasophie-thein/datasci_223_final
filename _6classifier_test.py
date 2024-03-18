@@ -1,4 +1,6 @@
-
+"""
+This script tests the model. 
+"""
 #%%
 
 import h5py
