@@ -18,6 +18,7 @@ imageSize = 128
 epochs = 15
 batch_size = 100
 
+# Specify directory and models
 model_name = 'segmented128'
 homedir = "/Users/anna-sophiethein/Dropbox/Medicine MAS/24WI DATASCI 223/github_223/datasci_223/final"
 model_dir = os.path.join(homedir, 'model', model_name)
@@ -107,11 +108,3 @@ history = model.fit(generator(h5file_train, batch_size, num_classes),
 
 # Save the final model
 model.save(os.path.join(model_dir, 'final_model.h5'))
-
-# Compute the actual number of classes
-with h5py.File(h5file_train, 'r') as f:
-    y_train = f['y_train'][:]
-    num_classes = len(np.unique(y_train))
-
-print("Number of unique classes:", num_classes)
-print("Shape of y_train:", y_train.shape)
