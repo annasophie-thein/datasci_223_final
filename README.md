@@ -9,10 +9,13 @@ The dataset consists of OCT images from a publicly available dataset (https://ww
 2) Segmentation: The goal of the segmentation was to simplify and/or change the representation of the images to make them easier to analyze. This included border fill-in, thresholding using Otsu's Binary Thresholding to to minimize the intra-class variance of the pixel intensities in the two classes while maximizing the inter-class variance, image opening, image dilation, and cropping out ROIs.
 3) Data creation: This included loading the segmented image data, preprocessing, shuffling , and saving it into a HDF5 file for later use in model training or testing. The HDF5 file is an open source file format that supports large, complex, heterogeneous data.
 
-The dataset is initially stored in a directory structure that separates images by class. After preprocessing and segmentation, the images are resized and stored in HDF5 files for efficient access during model training and testing. The final dimensions of the images are tailored for the input requirements of the CNN model, which in this case are 128x128 pixels.
+The final dimensions of the images were tailored for the input requirements of the CNN model, in this case 128x128 pixels.
 
 #### How to Run the Code
-Dependencies include Python libraries such as `sklearn`, `os`, `shutil`, `multiprocessing`, `cv2` (OpenCV), `numpy`, `time`, `h5py`, `tqdm`, and `tensorflow`/`keras`. To run the code:
+Dependencies include Python libraries `sklearn`, `os`, `shutil`, `multiprocessing`, `cv2` (OpenCV), `numpy`, `time`, `h5py`, `tqdm`, and `tensorflow`/`keras`. To run the code:
+Run code in order, i.e. 
+1. _1folder_creater.ipynb
+2. _2image_segmenter_test.py
 1. Ensure all dependencies are installed using pip or conda.
 2. Organize the OCT images into the specified directory structure.
 3. Execute the scripts in the following order: data organization, image segmentation, HDF5 file creation for training and testing data, model training, and model testing.
