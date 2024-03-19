@@ -15,7 +15,10 @@ The final dimensions of the images were tailored for the input requirements of t
 Dependencies include Python libraries `sklearn`, `os`, `shutil`, `multiprocessing`, `cv2` (OpenCV), `numpy`, `time`, `h5py`, `tqdm`, and `tensorflow`/`keras`. To run the code:
 Run code in order, i.e. 
 1. _1folder_creater.ipynb
-2. _2image_segmenter_test.py
+2. _2image_segmenter_train.py
+3. _3data_creater_train.py
+4. 4data_checker.py
+5. 
 1. Ensure all dependencies are installed using pip or conda.
 2. Organize the OCT images into the specified directory structure.
 3. Execute the scripts in the following order: data organization, image segmentation, HDF5 file creation for training and testing data, model training, and model testing.
