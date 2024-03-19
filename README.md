@@ -1,27 +1,31 @@
 ### DATASCI 223 Final Project:
 
 #### Overview of the Problem
-Optical Coherence Tomography (OCT) is a non-invasive diagnostic technique that provides an in vivo cross-sectional view of the retina. This project aims to classify common ocular diseases that can be diagnosed on OCT images; age-related macular degeneration (AMD), diabetic retinopathy (DR), macular hole (MH), and choroidal neovascularization (CNV). Using a machine learning model in clinic to classify the OCT images could provide support and time optimization for the ophthalmologist reviewing the images. This process involved organizing data into training and testing sets, preprocessing images, segmenting regions of interest (ROI), creating data structures for model training, training a convolutional neural network (CNN) model, and evaluating the model on unseen data.
+Optical Coherence Tomography (OCT) is a non-invasive diagnostic technique that provides an in vivo cross-sectional view of the retina. This project aims to classify common ocular diseases that can be diagnosed on OCT images; age-related macular degeneration (AMD), diabetic retinopathy (DR), macular hole (MH), and choroidal neovascularization (CNV). Using a machine learning model in clinic to classify the OCT images could provide support and time optimization for the ophthalmologist reviewing the images. 
+
+This project involved organizing data into training and testing sets, preprocessing images, segmenting regions of interest (ROI), creating data structures for model training, training a convolutional neural network (CNN) model, and evaluating the model on unseen data.
 
 #### Description of the Dataset
 The dataset consists of OCT images from a publicly available dataset (https://www.kaggle.com/datasets/paultimothymooney/kermany2018). 
-1) Folder creation: The images were categorized into five classes and placed in subfolder in the directory: AMD, DR, CNV, MH, and normal. Each  represents either one of the listed ocular diseases or "normal".
-2) Segmentation: The goal of the segmentation was to simplify and/or change the representation of the images to make them easier to analyze. This included border fill-in, thresholding using Otsu's Binary Thresholding to to minimize the intra-class variance of the pixel intensities in the two classes while maximizing the inter-class variance, image opening, image dilation, and cropping out ROIs.
-3) Data creation: This included loading the segmented image data, preprocessing, shuffling , and saving it into a HDF5 file for later use in model training or testing. The HDF5 file is an open source file format that supports large, complex, heterogeneous data.
+1) Folder creation: The images were categorized into five classes and placed in subfolder in the directory: AMD, DR, CNV, MH, and normal. Each  represented either one of the listed ocular diseases or "normal".
+2) Segmentation: The goal of the segmentation was to simplify and/or change the representation of the images to make them easier to analyze. This included border fill-in, thresholding using Otsu's Binary Thresholding to minimize the intra-class variance of the pixel intensities in the two classes while maximizing the inter-class variance, image opening, image dilation, and cropping out ROIs.
+3) Data creation: This included loading the segmented image data, preprocessing, shuffling, and saving it into a HDF5 file for later use in model training and testing. The HDF5 file is an open source file format that supports large, complex, heterogeneous data.
 
-The final dimensions of the images were tailored for the input requirements of the CNN model, in this case 128x128 pixels.
+The final dimensions of the images were tailored for the input requirements of the CNN model, in this case 128x128 pixels. The X-value in the file described the pixels, while the y-value described the class out of the five possible classes with labels 0 = normal, 1 = CNV, 2 = DR, 3 = AMD, and 4 = MH. 
 
 #### How to Run the Code
 Dependencies include Python libraries `sklearn`, `os`, `shutil`, `multiprocessing`, `cv2` (OpenCV), `numpy`, `time`, `h5py`, `tqdm`, and `tensorflow`/`keras`. To run the code:
-Run code in order, i.e. 
-1. _1folder_creater.ipynb
-2. _2image_segmenter_train.py
-3. _3data_creater_train.py
-4. 4data_checker.py
-5. 
-1. Ensure all dependencies are installed using pip or conda.
-2. Organize the OCT images into the specified directory structure.
-3. Execute the scripts in the following order: data organization, image segmentation, HDF5 file creation for training and testing data, model training, and model testing.
+1. Download datasets to directory. Correct directories in scripts as needed. 
+2. _1folder_creater.ipynb
+3. _2image_segmenter_train.py
+4. _2image_segmenter_test.py
+5. _3data_creater_train.py
+6. _3data_creater_test.py
+7. _4data_checker.py
+8. _5classifier_train.py
+9. _6classifier_test.py
+
+Note that the segmenter function used in _2image_segmenter is defined in "segmenter_function.py". 
 
 #### Decisions Made Along the Way
 - **Trade-offs**: For time efficiency, aggressive image segmentation and noise reduction techniques were used, possibly omitting subtle features relevant for some disease classifications.
@@ -30,8 +34,17 @@ Run code in order, i.e.
 #### Example Output
 The final scripts perform disease classification on a test image, displaying the predicted disease class overlaid on the original OCT image. The output is a visual confirmation of the model's prediction capability.
 
+#### Next steps 
+Due to limited time, we performed very limited testing and optimization of the model. Next steps would include a thorough testing phase, obtaining an accuary table and confusion matrix, and testing the model on other datasets. 
+
 #### Citations
-- Data, code, and conceptual frameworks are based on existing works in ocular disease classification from OCT images. https://www.nature.com/articles/s41598-023-30853-z 
+Data, code, and conceptual frameworks are based on existing works in ocular disease classification from OCT images.
+Sources: 
+- https://www.nature.com/articles/s41598-023-30853-z
+- https://www.kaggle.com/datasets/paultimothymooney/kermany2018
+- https://www.cell.com/cell/fulltext/S0092-8674(18)30154-5
+- https://github.com/sairamadithya/OCT-classification
+- https://github.com/annasophie-thein/retinal-oct-classify/tree/master
 
 ### Short-form Presentation:
 
