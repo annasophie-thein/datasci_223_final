@@ -32,10 +32,10 @@ Note that the segmenter function used in _2image_segmenter is defined in "segmen
 - **Model Complexity**: A relatively simple CNN architecture was chosen to balance between accuracy and computational efficiency. This might limit the model's ability to capture highly intricate patterns within the OCT images.
 
 #### Example Output
-The final scripts perform disease classification on a test image, displaying the predicted disease class overlaid on the original OCT image. The output is a visual confirmation of the model's prediction capability.
+The final scripts perform disease classification on a test image, displaying the predicted disease class overlaid on the original OCT image. 
 
 #### Next steps 
-Due to limited time, we performed very limited testing and optimization of the model. Next steps would include a thorough testing phase, obtaining an accuary table and confusion matrix, and testing the model on other datasets. 
+Due to limited time, we performed minimal testing and optimization of the model. Next steps would include thorough testing and optimization, obtaining an accuary table and confusion matrix, and testing the model on other datasets. 
 
 #### Citations
 Data, code, and conceptual frameworks are based on existing works in ocular disease classification from OCT images.
@@ -49,13 +49,13 @@ Sources:
 ### Short-form Presentation:
 
 #### Problem Statement
-We aim to develop an automated system for classifying and segmenting ocular diseases from OCT images, facilitating early diagnosis and treatment planning.
+We aim to develop a model for classifying common ocular diseases from OCT images to facilitate clinical decision making. 
 
 #### Existing Work Pulled From
 Our approach is inspired by recent advancements in medical image processing and deep learning, particularly in applying CNNs for image classification and segmentation tasks in clinical areas. 
 
 #### Your Contribution
-We contributed by implementing a streamlined pipeline for preprocessing OCT images, segmenting them into regions of interest, and classifying them into five distinct categories representing different ocular conditions, including a normal eye condition.
+We contributed by creating a model for preprocessing OCT images, segmenting them into regions of interest, and classifying them into five distinct categories of either age-related macular degeneration, diabetic retinopathy, macular hole, and choroidal neovascularization, or normal.
 
 #### Tools/Methods Used
 - Python for scripting.
