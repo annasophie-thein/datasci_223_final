@@ -1,7 +1,7 @@
 ### DATASCI 223 Final Project:
 
 #### Collaborators
-Anna-Sophie Thein and Kevin Li
+Kevin Li and Anna-Sophie Thein
 
 #### Overview of the Problem
 Optical Coherence Tomography (OCT) is a non-invasive diagnostic technique that provides an in vivo cross-sectional view of the retina. This project aims to classify common ocular diseases that can be diagnosed on OCT images; age-related macular degeneration (AMD), diabetic retinopathy (DR), macular hole (MH), and choroidal neovascularization (CNV). Using a machine learning model in clinic to classify the OCT images could provide support and time optimization for the ophthalmologist reviewing the images. 
