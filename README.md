@@ -9,7 +9,7 @@ Optical Coherence Tomography (OCT) is a non-invasive diagnostic technique that p
 This project involved organizing data into training and testing sets, preprocessing images, segmenting regions of interest (ROI), creating data structures for model training, training a convolutional neural network (CNN) model, and evaluating the model on unseen data.
 
 #### Description of the Dataset
-The dataset consists of OCT images from a publicly available dataset (https://www.kaggle.com/datasets/paultimothymooney/kermany2018). 
+The dataset consists of OCT images from a publicly available dataset (https://www.kaggle.com/datasets/saifurrahmanshatil/retinal-oct-dataset). 
 1) Folder creation: The images were categorized into five classes and placed in subfolder in the directory: AMD, DR, CNV, MH, and normal. Each  represented either one of the listed ocular diseases or "normal".
 2) Segmentation: The goal of the segmentation was to simplify and/or change the representation of the images to make them easier to analyze. This included border fill-in, thresholding using Otsu's Binary Thresholding to minimize the intra-class variance of the pixel intensities in the two classes while maximizing the inter-class variance, image opening, image dilation, and cropping out ROIs.
 3) Data creation: This included loading the segmented image data, preprocessing, shuffling, and saving it into a HDF5 file for later use in model training and testing. The HDF5 file is an open source file format that supports large, complex, heterogeneous data.
