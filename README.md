@@ -37,6 +37,10 @@ Note that the segmenter function used in _2image_segmenter is defined in "segmen
 #### Example Output
 The final scripts perform disease classification on a test image, displaying the predicted disease class overlaid on the original OCT image. 
 
+#### Model Evaluation
+![Accuracy table](https://github.com/annasophie-thein/datasci_223_final/blob/main/accuracy_table.png)
+![Confusion matrix](https://github.com/annasophie-thein/datasci_223_final/blob/main/confusion_matrix.png=
+
 #### Next steps 
 Due to limited time, we performed minimal testing and optimization of the model. Next steps would include thorough testing and optimization, obtaining an accuary table and confusion matrix, and testing the model on other datasets. 
 
