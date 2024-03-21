@@ -38,9 +38,9 @@ Note that the segmenter function used in _2image_segmenter is defined in "segmen
 The final scripts perform disease classification on a test image, displaying the predicted disease class overlaid on the original OCT image. 
 
 #### Model Evaluation
-Below are the accuracy table and confusion matrix for the model. 
+Below are the model performance table and confusion matrix for the model. 
 
-![Accuracy table](https://github.com/annasophie-thein/datasci_223_final/blob/main/accuracy_table.png)
+![Model performance table](https://github.com/annasophie-thein/datasci_223_final/blob/main/accuracy_table.png)
 
 
 ![Confusion matrix](https://github.com/annasophie-thein/datasci_223_final/blob/main/confusion_matrix.png)
